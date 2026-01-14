@@ -15,9 +15,9 @@
 
  (:name "Chris Morgan"
   :site "https://chrismorgan.info/"
+  :blog "https://chrismorgan.info/blog/"
   :feed "https://chrismorgan.info/feed.xml"
   :about "https://chrismorgan.info/about/"
-  :blog "https://chrismorgan.info/blog/"
   :hnuid "chrismorgan"
   :bio "Software developer, dealing mostly with web things.")
 
@@ -30,9 +30,10 @@
 
  (:name "John Graham-Cumming"
   :site "https://jgc.org/"
+  :blog "https://blog.jgc.org/"
   :feed "https://blog.jgc.org/feeds/posts/default"
   :about "https://en.wikipedia.org/wiki/John_Graham-Cumming"
-  :blog "https://blog.jgc.org/"
+
   :hnuid "jgc"
   :bio "Original writer of POPFile.  Member of the board of directors at Cloudflare.")
 
@@ -48,6 +49,12 @@
   :feed "https://nchagnet.pages.dev/rss.xml"
   :hnuid "nchagnet"
   :bio "Writes about physics, technology and data science.")
+
+ (:name "Sam Broner"
+  :site "https://sambroner.com/"
+  :feed "https://sambroner.com/rss.xml"
+  :hnuid "sambroner"
+  :bio "Writes about blockchains, distributed systems, dev tools, CRDTs, etc.")
 
  (:name "Sean Goedecke"
   :site "https://www.seangoedecke.com/"
@@ -72,16 +79,16 @@
 
  (:name "Xe Iaso"
   :site "https://xeiaso.net/"
-  :feed "https://xeiaso.net/blog.rss"
   :blog "https://xeiaso.net/blog/"
+  :feed "https://xeiaso.net/blog.rss"
   :hnuid "xena"
   :bio "Creator of Anubis.  Technical educator, conference speaker and Twitch streamer.")
 
  (:name ""
   :site ""
+  :blog ""
   :feed ""
   :about ""
-  :blog ""
   :now ""
   :hnuid ""
   :bio "")
