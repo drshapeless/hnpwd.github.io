@@ -1,13 +1,7 @@
 ;;;; HN Personal Websites Directory
 ;;;; ==============================
 
-;;; The outermost parentheses are deliberately placed on their own
-;;; lines, despite diverging from Lisp conventions, to make the
-;;; property lists below easier to copy, paste and rearrange in
-;;; ordinary text editors.
-
-(
- (:name "Jeff Geerling"
+((:name "Jeff Geerling"
   :site "https://www.jeffgeerling.com/"
   :feed "https://www.jeffgeerling.com/blog.xml"
   :about "https://www.jeffgeerling.com/about/"
@@ -35,11 +29,6 @@
   :hnuid "susam"
   :bio "Creator of Emacs devil-mode.  Writes about technology and mathematics.")
 
- ;; You can copy and paste the following property list to create your
- ;; own.  Make sure your property list is inserted in the correct
- ;; place above so that all entries remain ordered alphabetically by
- ;; name.
-
  (:name "Author Name (first name and last name)"
   :site "https://example.com/"
   :feed "https://example.com/feed.xml"
@@ -47,4 +36,5 @@
   :now "https://example.com/now/"
   :hnuid "example (user ID on HN)"
   :bio "A brief third-person description of yourself, not exceeding 80 characters.")
-)
+
+ (:end))

@@ -6,8 +6,8 @@ directory of personal websites by members of the Hacker News (HN)
 community, along with an OPML file containing their RSS feeds.  Please
 visit the following link to view these resources:
 
-* [hnpwd.github.io][site]
-* [pwd.opml][opml]
+* Directory Website: [hnpwd.github.io][site]
+* RSS Feeds OPML: [pwd.opml][opml]
 
 [site]: https://hnpwd.github.io/
 [opml]: https://hnpwd.github.io/pwd.opml

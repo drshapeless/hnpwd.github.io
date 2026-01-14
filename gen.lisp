@@ -1,3 +1,6 @@
+;;;; HN Personal Websites Directory Generator
+;;;; ========================================
+
 (defun write-file (filename text)
   "Write text to file and close the file."
   (with-open-file (f filename :direction :output :if-exists :supersede)
@@ -11,7 +14,8 @@
   "Read website entries from the data file."
   (remove-if
    (lambda (item)
-     (string= (getf item :site) "https://example.com/"))
+     (or (equal item '(:end))
+         (string= (getf item :site) "https://example.com/")))
    (read-list "pwd.lisp")))
 
 (defun validate-name-order (items)
@@ -114,13 +118,13 @@
     (format s "    </main>~%")
     (format s "    <footer>~%")
     (format s "      <nav>~%")
-    (format s "        <a href=\"https://github.com/hnpwd/hnpwd.github.io#README\">README</a>~%")
+    (format s "        <a href=\"https://github.com/hnpwd/hnpwd.github.io#readme\">README</a>~%")
     (format s "        <a href=\"pwd.opml\">OPML</a>~%")
     (format s "        <a href=\"https://web.libera.chat/#hnpwd\">IRC</a>~%")
     (format s "      </nav>~%")
     (format s "      <p>~%")
-    (format s "        This website is not affiliated with Hacker News.~%")
-    (format s "        It is a community-maintained directory of~%")
+    (format s "        This website is not affiliated with Y Combinator.~%")
+    (format s "        This is a community-maintained directory of~%")
     (format s "        personal websites by active members of the HN community.~%")
     (format s "      </p>~%")
     (format s "    </footer>~%")
