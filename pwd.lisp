@@ -154,6 +154,11 @@
   :hnuid "xena"
   :bio "Creator of Anubis.  Technical educator, conference speaker and Twitch streamer.")
 
+  (:name "Mike Damm"
+  :site "https://mikedamm.com/"
+  :hnuid "mike_d"
+  :bio "Security researcher, first engineer at OpenDNS. Operates public benefit internet infrastructure.")
+
  (:name ""
   :site ""
   :blog ""
