@@ -49,6 +49,13 @@
   :hnuid "chrismorgan"
   :bio "Software developer, dealing mostly with web things.")
 
+ (:name "Doug Slater"
+  :site "https://www.slater.dev/"
+  :feed "https://www.slater.dev/atom.xml"
+  :about "https://www.slater.dev/about"
+  :hnuid "sltr"
+  :bio "Writes fixes for technical and social pains common to all devs.")
+
  (:name "Gavin D. Howard"
   :site "https://gavinhoward.com/"
   :feed "https://gavinhoward.com/index.xml"
