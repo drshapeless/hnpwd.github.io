@@ -121,24 +121,31 @@
                                              (:name "Bob")
                                              (:name "Alice")))) 2)))
 
-(test-case validate-bio-texts
+(test-case validate-bio-basic
   ;; No errors.
-  (assert (=  (length (validate-bio-texts '((:bio "foo, bar and baz.")))) 0))
-  (assert (=  (length (validate-bio-texts '((:bio "foo, bar & baz.")))) 1))
+  (assert (=  (length (validate-bio-basic '((:bio "foo, bar and baz.")))) 0))
+  (assert (=  (length (validate-bio-basic '((:bio "foo, bar & baz.")))) 1))
   ;; 1 error: Ampersand not allowed.
-  (assert (=  (length (validate-bio-texts '((:bio "foo, bar & baz.")))) 1))
+  (assert (=  (length (validate-bio-basic '((:bio "foo, bar & baz.")))) 1))
   ;; 1 error: Full stop missing.
-  (assert (=  (length (validate-bio-texts '((:bio "foo, bar and baz")))) 1))
+  (assert (=  (length (validate-bio-basic '((:bio "foo, bar and baz")))) 1))
   ;; 1 error: Oxford comma not allowed.
-  (assert (=  (length (validate-bio-texts '((:bio "foo, bar, and baz.")))) 1))
+  (assert (=  (length (validate-bio-basic '((:bio "foo, bar, and baz.")))) 1))
   ;; 3 error: Ampersand, Oxford comma and full stop missing.
-  (assert (=  (length (validate-bio-texts '((:bio "foo & bar, and baz")))) 3))
+  (assert (=  (length (validate-bio-basic '((:bio "foo & bar, and baz")))) 3))
   ;; No errors.  Maximum bio length allowed is 80 chars.
   (let ((bio "1234567890123456789012345678901234567890123456789012345678901234567890123456789."))
-    (assert (= (length (validate-bio-texts `((:bio ,bio)))) 0)))
+    (assert (= (length (validate-bio-basic `((:bio ,bio)))) 0)))
   ;; 1 error: Bio length is 81 but maximum length is 80.
   (let ((bio "12345678901234567890123456789012345678901234567890123456789012345678901234567890."))
-    (assert (= (length (validate-bio-texts `((:bio ,bio)))) 1))))
+    (assert (= (length (validate-bio-basic `((:bio ,bio)))) 1))))
+
+(test-case validate-bio-spacing
+  (assert (= (length (validate-bio-spacing '((:bio "Foo.  Bar.  Baz.")))) 0))
+  (assert (= (length (validate-bio-spacing '((:bio "Foo. Bar.  Baz.")))) 1))
+  (assert (= (length (validate-bio-spacing '((:bio "Foo.  Bar.  Baz.")
+                                             (:bio "Foo. Bar.  Baz.")
+                                             (:bio "Foo. Bar. Baz.")))) 2)))
 
 (test-case validate-urls-protocol
   (assert (= (length (validate-urls '((:site "example/foo/bar/baz/")))) 1))

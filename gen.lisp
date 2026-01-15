@@ -11,6 +11,10 @@
   "Format string using specified format and arguments."
   (apply #'format nil fmt args))
 
+(defun jstr (&rest strings)
+  "Join strings into a single string."
+  (apply #'concatenate 'string strings))
+
 (defun write-file (filename text)
   "Write text to file and close the file."
   (with-open-file (f filename :direction :output :if-exists :supersede)
@@ -74,7 +78,7 @@
       (setf prev-name curr-name))
     (reverse errors)))
 
-(defun validate-bio-texts (items)
+(defun validate-bio-basic (items)
   "Check that bio entries look good."
   (let ((max-len 80)
         (bio)
@@ -91,8 +95,33 @@
           (push (fstr "~a: Bio must end with a full stop (period)"
                       (getf item :name)) errors))
         (when (search ", and" bio)
-          (push (fstr "~a: Bio must not contain comma before 'and' (avoid Oxford comma)"
-                      (getf item :name)) errors))))
+          (push (fstr (jstr "~a: Bio must not contain comma before 'and' ("
+                            "avoid Oxford comma)") (getf item :name)) errors))))
+    (reverse errors)))
+
+(defun validate-bio-spacing (items)
+  "Check if the bio uses double spacing convention."
+  ;; Checking the double-spacing convention is a non-trivial problem
+  ;; and in fact Emacs has entire packages dedicated to this problem.
+  ;; Here we implement a very trivial algorithm that is not exhaustive
+  ;; in its checks but catches most of the typical problems.
+  ;; Essentially, this looks for the sequence <lower-case> <full-stop>
+  ;; <space> <non-space> and flags it.  It will catch violations like
+  ;; "This. That." but it will miss violations like "HN. Rocks."  This
+  ;; is good enough for a small project like this.
+  (let ((bio)
+        (errors))
+    (dolist (item items)
+      (when (setf bio (getf item :bio))
+        (dotimes (i (- (length bio) 3))
+          (when (and (not (upper-case-p (char bio i)))
+                     (char= (char bio (+ i 1)) #\.)
+                     (char= (char bio (+ i 2)) #\Space)
+                     (char/= (char bio (+ i 3)) #\Space))
+            (push (fstr (jstr "~a ('~a'): A full stop (period) in the middle of "
+                              "bio must be followed by two spaces.")
+                        (getf item :name) (subseq bio i (+ i 4))) errors)
+            (return)))))
     (reverse errors)))
 
 (defun pick-urls (item)
@@ -149,9 +178,10 @@
 
 (defun validate (items)
   (let ((errors (append (validate-name-order items)
-                        (validate-bio-texts items)
                         (validate-urls items)
                         (validate-unique-urls items)
+                        (validate-bio-basic items)
+                        (validate-bio-spacing items)
                         (validate-hn-uids items))))
     (when (consp errors)
       (loop for error in errors

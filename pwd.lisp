@@ -33,7 +33,7 @@
   :feed "https://amontalenti.com/feed"
   :about "https://amontalenti.com/about"
   :hnuid "pixelmonkey"
-  :bio "Founder of PX. Formerly founding CTO of Parse.ly. Pythonista and UNIX lover.")
+  :bio "Founder of PX.  Formerly founding CTO of Parse.ly.  Pythonista and UNIX lover.")
 
  (:name "Anthony Bonkoski"
   :site "https://xorvoid.com/"
@@ -102,7 +102,7 @@
   :site "https://charleszw.com/"
   :blog "https://charleszw.com/posts"
   :hnuid "charleszw"
-  :bio "Engineer, pixel pushing and bridge carving. Computer graphics and game engines.")
+  :bio "Engineer, pixel pushing and bridge carving.  Computer graphics and game engines.")
 
  (:name "Chris Morgan"
   :site "https://chrismorgan.info/"
