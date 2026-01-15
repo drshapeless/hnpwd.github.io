@@ -35,6 +35,13 @@
   :hnuid "aartaka"
   :bio "Writes about Lisp, ed(1) and the Web.")
 
+ (:name "Arul Pugazhendi"
+  :site "https://www.arulpugazh.com/"
+  :feed "https://www.arulpugazh.com/feed.xml"
+  :about "https://www.arulpugazh.com/about"
+  :hnuid "arulpugazh"
+  :bio "Canadian ML engineer and founder of TensorHub Solutions Inc.")
+
  (:name "Captain's Quarters"
   :site "https://quarters.captaintouch.com/"
   :feed "https://quarters.captaintouch.com/blog/posts.xml"
