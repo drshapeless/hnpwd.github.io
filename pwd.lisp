@@ -326,6 +326,14 @@
   :hnuid "sebasv_"
   :bio "Data scientist and open source contributor.  Writes about solving problems.")
 
+ (:name "Silvestar Bistrović"
+  :site "https://www.silvestar.codes/"
+  :blog "https://www.silvestar.codes/articles/"
+  :feed "https://www.silvestar.codes/rss.xml"
+  :about "https://www.silvestar.codes/about/"
+  :hnuid "starbist"
+  :bio "Web developer, author of the UI Dev Newsletter and founder of Studio CiTA.")
+
  (:name "Simon Willison"
   :site "https://simonwillison.net/"
   :feed "https://simonwillison.net/atom/everything/"
