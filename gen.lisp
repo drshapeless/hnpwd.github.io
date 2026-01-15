@@ -25,6 +25,11 @@
   (terpri *error-output*)
   (uiop:quit 1))
 
+(defun has-duplicates-p (items)
+  "Check if there are duplicates in the given items."
+  (< (length (remove-duplicates items :test #'equal))
+     (length items)))
+
 (defun validate-name-order (items)
   "Check that entries are arranged in the order of names."
   (let ((prev-name)
@@ -50,6 +55,16 @@
     (let ((bio (getf item :bio)))
       (when (and bio (char/= (char bio (1- (length bio))) #\.))
         (err "~a: Bio does not end with a full stop" (getf item :name))))))
+
+(defun validate-unique-urls (items)
+  "Check that there are no duplicates in the URLs within the same entry."
+  (dolist (item items)
+    (when (has-duplicates-p (remove nil (list (getf item :site)
+                                              (getf item :blog)
+                                              (getf item :feed)
+                                              (getf item :about)
+                                              (getf item :now))))
+      (err "~a: Entry has duplicate URLs" (getf item :name)))))
 
 (defun weekday-name (weekday-index)
   "Given an index, return the corresponding day of week."
@@ -191,6 +206,7 @@
   "Create artefacts."
   (let ((entries (read-entries)))
     (validate-name-order entries)
+    (validate-unique-urls entries)
     (validate-bio-length entries)
     (validate-bio-stop entries)
     (write-file "pwd.opml" (make-opml entries))

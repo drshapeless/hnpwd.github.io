@@ -96,7 +96,6 @@
  (:name "Kyle Ross"
   :site "https://ktross.com/"
   :feed "https://ktross.com/rss.xml"
-  :about "https://ktross.com/"
   :hnuid "ktross"
   :bio "Software Engineer.  Interested in DevOps, DevEx and programming languages.")
 
@@ -186,6 +185,13 @@
   :about "https://www.degraeve.com/about/"
   :bio "Develops tools and generative art.  Writes about software and building websites.")
 
+ (:name "Suriya Ganesh Ayyamperumal"
+  :site "https://suriya.cc/"
+  :feed "https://suriya.cc/index.xml"
+  :now "https://suriya.cc/now/"
+  :hnuid "suriya-ganesh"
+  :bio "Engineer who loves to write about technology and life.")
+
  (:name "Susam Pal"
   :site "https://susam.net/"
   :feed "https://susam.net/feed.xml"
@@ -193,14 +199,6 @@
   :now "https://susam.net/now"
   :hnuid "susam"
   :bio "Creator of Emacs devil-mode.  Writes about technology and mathematics.")
-
- (:name "Suriya Ganesh Ayyamperumal"
-  :site "https://suriya.cc/"
-  :feed "https://suriya.cc/index.xml"
-  :about "https://suriya.cc/"
-  :now "https://suriya.cc/now/"
-  :hnuid "suriya-ganesh"
-  :bio "Engineer who loves to write about tech and life")
 
  (:name "Theodore Morley"
   :site "https://tjmorley.com/"
