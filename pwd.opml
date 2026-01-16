@@ -3,10 +3,10 @@
   <head>
     <title>HN Personal Websites</title>
     <dateCreated>Wed, 14 Jan 2026 00:00:00 UTC</dateCreated>
-    <dateModified>Fri, 16 Jan 2026 04:38:08 UTC</dateModified>
+    <dateModified>Fri, 16 Jan 2026 05:13:21 UTC</dateModified>
   </head>
   <body>
-    <!-- 60 entries -->
+    <!-- 61 entries -->
     <outline text="HN Personal Websites" title="HN Personal Websites">
       <outline type="rss" text="Aditya Athalye" title="Aditya Athalye" xmlUrl="https://www.evalapply.org/index.xml" htmlUrl="https://www.evalapply.org/"/>
       <outline type="rss" text="Alan Grow" title="Alan Grow" xmlUrl="https://alangrow.com/blog/atom.xml" htmlUrl="https://alangrow.com/"/>
@@ -48,6 +48,7 @@
       <outline type="rss" text="Kyle Ross" title="Kyle Ross" xmlUrl="https://ktross.com/rss.xml" htmlUrl="https://ktross.com/"/>
       <outline type="rss" text="Laurent P. René de Cotret" title="Laurent P. René de Cotret" xmlUrl="https://laurentrdc.xyz/atom.xml" htmlUrl="https://laurentrdc.xyz/"/>
       <outline type="rss" text="Lawrence Gimenez" title="Lawrence Gimenez" xmlUrl="https://law.gmnz.xyz/feed" htmlUrl="https://law.gmnz.xyz/"/>
+      <outline type="rss" text="Lorenzo Gravina" title="Lorenzo Gravina" xmlUrl="https://trms.me/feed/" htmlUrl="https://lorenzogravina.com/"/>
       <outline type="rss" text="Matt Crampton" title="Matt Crampton" xmlUrl="https://www.mattcrampton.com/feed.xml" htmlUrl="https://www.mattcrampton.com/"/>
       <outline type="rss" text="Matteo" title="Matteo" xmlUrl="https://xnacly.me/index.xml" htmlUrl="https://xnacly.me/"/>
       <outline type="rss" text="Mike Cardwell" title="Mike Cardwell" xmlUrl="https://www.grepular.com/rss" htmlUrl="https://www.grepular.com/"/>
