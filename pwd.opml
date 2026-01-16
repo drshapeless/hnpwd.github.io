@@ -3,13 +3,14 @@
   <head>
     <title>HN Personal Websites</title>
     <dateCreated>Wed, 14 Jan 2026 00:00:00 UTC</dateCreated>
-    <dateModified>Fri, 16 Jan 2026 03:31:25 UTC</dateModified>
+    <dateModified>Fri, 16 Jan 2026 03:35:24 UTC</dateModified>
   </head>
   <body>
-    <!-- 55 entries -->
+    <!-- 56 entries -->
     <outline text="HN Personal Websites" title="HN Personal Websites">
       <outline type="rss" text="Aditya Athalye" title="Aditya Athalye" xmlUrl="https://www.evalapply.org/index.xml" htmlUrl="https://www.evalapply.org/"/>
       <outline type="rss" text="Alan Grow" title="Alan Grow" xmlUrl="https://alangrow.com/blog/atom.xml" htmlUrl="https://alangrow.com/"/>
+      <outline type="rss" text="Aleksey Tsalolikhin" title="Aleksey Tsalolikhin" xmlUrl="https://tsalolikhin.com/posts/index.xml" htmlUrl="https://tsalolikhin.com/"/>
       <outline type="rss" text="Alex Lance" title="Alex Lance" xmlUrl="https://alexlance.blog/feed.xml" htmlUrl="https://alexlance.blog/"/>
       <outline type="rss" text="Alex Tiniuc" title="Alex Tiniuc" xmlUrl="https://tiniuc.com/atom.xml" htmlUrl="https://tiniuc.com/"/>
       <outline type="rss" text="Andrew Montalenti" title="Andrew Montalenti" xmlUrl="https://amontalenti.com/feed" htmlUrl="https://amontalenti.com/"/>
